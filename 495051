@@ -6,7 +6,7 @@ int main()
     int num,i;
     cout<<"Enter a number : ";
     cin>>num;
-    for(i=3; i<num; i++)
+    for(i=3; i<=num/2; i++)
     {
         int x,z,y=1;
         for(x=2; x<i; x++)
@@ -34,11 +34,6 @@ int main()
                 if(b<=1 && z+i==num)
                 {
                     cout<<num<<"="<<i<<"+"<<z<<endl;
-                }
-                else
-                {
-                    cout<<"No result";
-                    break;
                 }
             }
         }
