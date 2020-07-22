@@ -1,6 +1,19 @@
 #include<iostream>
 using namespace std;
-
+int check(int &m,int &n)
+{
+int x;
+n=1;
+for(x=2; x<m; x++)
+        {
+            if(m%x==0)
+            {
+                n++;
+                break;
+            }
+        }
+        
+}
 int main()
 {
     int num,i;
@@ -9,28 +22,13 @@ int main()
     for(i=3; i<=num/2; i++)
     {
         int x,z,y=1;
-        for(x=2; x<i; x++)
-        {
-            if(i%x==0)
-            {
-                y++;
-                break;
-            }
-        }
+        check(i,y);
         if(y<=1)
         {
             for(z=num-i; z>0; z--)
             {
                 int a,b=1;
-                for(a=2; a<z; a++)
-                {
-                    if(z%a==0)
-                    {
-                        b++;
-                        break;
-                    }
-                }
-
+              check(z,b);
                 if(b<=1 && z+i==num)
                 {
                     cout<<num<<"="<<i<<"+"<<z<<endl;
